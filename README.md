@@ -1,12 +1,11 @@
-Sliding Panels Template
+Auto-Hiding Navigation
 =========
+A simple navigation that auto-hides when the user scrolls down, and becomes visible when the user scrolls up.
 
-A simple portfolio template, with project preview images that slide out to reveal the selected project.
+[Article on CodyHouse](https://codyhouse.co/gem/auto-hiding-navigation)
 
-[Article on CodyHouse](http://codyhouse.co/gem/sliding-panels-template/)
-
-[Demo](https://codyhouse.co/demo/sliding-panels-template/index.html)
- 
-[Terms](http://codyhouse.co/terms/)
+[Demo](https://codyhouse.co/demo/auto-hiding-navigation/nav-subnav.html)
 
 Images: [Unsplash](https://unsplash.com/)
+ 
+[Terms](https://codyhouse.co/terms/)
