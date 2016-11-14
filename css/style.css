@@ -522,6 +522,7 @@ Intro Section
 
 /** An element that fades in */
 .m-scene .scene_element--fadein {
+  animation-duration: 2s;
   animation-name: fadeIn;
 }
 
