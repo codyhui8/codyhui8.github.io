@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
 		scrollDelta = 10,
 		scrollOffset = 150,
 		isHidden = false;
-		
+
 	mainHeader.on('click', '.nav-trigger', function(event){
 		// open primary navigation on mobile
 		event.preventDefault();
@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 			e.preventDefault();
 			var distance = Math.abs($(this).offset().top - $( $(this).attr('href') ).offset().top) - 70;
 			offsetDistance = 0; 
-			if((Math.abs(distance) > 350 && !isHidden) || (Math.abs(distance) < 300 & isHidden)) {
+			if((Math.abs(distance) > 350 && !isHidden) || (Math.abs(distance) < 350 & isHidden)) {
 				offsetDistance = 100;
 			} else {
 				offsetDistance = 150;
