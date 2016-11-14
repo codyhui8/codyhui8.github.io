@@ -14,12 +14,6 @@ jQuery(document).ready(function($){
 		scrollOffset = 150,
 		isHidden = false;
 
-	mainHeader.on('click', '.nav-trigger', function(event){
-		// open primary navigation on mobile
-		event.preventDefault();
-		mainHeader.toggleClass('nav-open');
-	});
-
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 		$(".headers").on("click", function( e ) {
@@ -58,6 +52,12 @@ jQuery(document).ready(function($){
 				? setTimeout(autoHideHeader, 500)
 				: requestAnimationFrame(autoHideHeader);
 		}
+	});
+
+	mainHeader.on('click', '.nav-trigger', function(event){
+		// open primary navigation on mobile
+		event.preventDefault();
+		mainHeader.toggleClass('nav-open');
 	});
 
 	$(window).on('resize', function(){
