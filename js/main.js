@@ -18,13 +18,22 @@ jQuery(document).ready(function($){
 		$(this).scrollTop(0);
 		$(".headers").on("click", function( e ) {
 			e.preventDefault();
-			var distance = Math.abs($(this).offset().top - $( $(this).attr('href') ).offset().top) - 70;
+			var distance = 0
+			if ($(this).offset().top - $( $(this).attr('href') ).offset().top < 0) {
+				distance = ($(this).offset().top - $( $(this).attr('href') ).offset().top) + 70;
+			} else {
+				distance = ($(this).offset().top - $( $(this).attr('href') ).offset().top) - 70;
+			}
 			offsetDistance = 0; 
-			if((Math.abs(distance) > 350 && !isHidden) || (Math.abs(distance) < 350 & isHidden)) {
+			if((distance < 300 && isHidden && distance > 0) 
+				|| (distance < -300)|| (distance > -300 && isHidden && distance < 0)) {
 				offsetDistance = 100;
 			} else {
 				offsetDistance = 150;
 			}
+			console.log(isHidden);
+			console.log(distance);
+			console.log(offsetDistance);
 			$("body, html").stop(true, true).animate({ 
 				scrollTop: $( $(this).attr('href') ).offset().top - offsetDistance
 			}, 1000);
