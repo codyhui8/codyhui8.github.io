@@ -433,6 +433,18 @@ Main content
   }
 }
 
+.cd-main-content .resume-header {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -1%;
+  margin-bottom: -2%;
+}
+
+.cd-main-content #education {
+  margin-top: 2%;
+}
+
 /* -------------------------------- 
 
 Intro Section

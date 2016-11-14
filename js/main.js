@@ -10,12 +10,32 @@ jQuery(document).ready(function($){
 		previousTop = 0,
 		currentTop = 0,
 		scrollDelta = 10,
-		scrollOffset = 150;
+		scrollOffset = 150,
+		isHidden = false;
 
 	mainHeader.on('click', '.nav-trigger', function(event){
 		// open primary navigation on mobile
 		event.preventDefault();
 		mainHeader.toggleClass('nav-open');
+	});
+
+	$(document).ready(function() {
+		$(this).scrollTop(0);
+		$(".headers").on("click", function( e ) {
+			e.preventDefault();
+			var distance = $(this).offset().top - $( $(this).attr('href') ).offset().top;
+			console.log($(this).offset().top - $( $(this).attr('href') ).offset().top);
+			console.log(isHidden);
+			offsetDistance = 0; 
+			if((Math.abs(distance) > 350 && !isHidden) || (Math.abs(distance) < 350 & isHidden)) {
+				offsetDistance = 100;
+			} else {
+				offsetDistance = 150;
+			}
+			$("body, html").animate({ 
+				scrollTop: $( $(this).attr('href') ).offset().top - offsetDistance
+			}, 1000);
+		});
 	});
 
 	$(window).on('scroll', function(){
@@ -47,9 +67,11 @@ jQuery(document).ready(function($){
 	    if (previousTop - currentTop > scrollDelta) {
 	    	//if scrolling up...
 	    	mainHeader.removeClass('is-hidden');
+	    	isHidden = false;
 	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
 	    	//if scrolling down...
 	    	mainHeader.addClass('is-hidden');
+	    	isHidden = true;
 	    }
 	}
 
@@ -59,32 +81,39 @@ jQuery(document).ready(function($){
 		
 		if (previousTop >= currentTop ) {
 	    	//if scrolling up... 
-	    	if( currentTop < secondaryNavOffsetTop ) {
+	    	if( currentTop < secondaryNavOffsetTop && !changingLink) {
 	    		//secondary nav is not fixed
 	    		mainHeader.removeClass('is-hidden');
 	    		secondaryNavigation.removeClass('fixed slide-up');
 	    		belowNavHeroContent.removeClass('secondary-nav-fixed');
-	    	} else if( previousTop - currentTop > scrollDelta ) {
+	    		isHidden = false;
+	    	} else if( previousTop - currentTop > scrollDelta && !changingLink) {
 	    		//secondary nav is fixed
 	    		mainHeader.removeClass('is-hidden');
 	    		secondaryNavigation.removeClass('slide-up').addClass('fixed'); 
 	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    		isHidden = false;
 	    	}
 	    	
 	    } else {
 	    	//if scrolling down...	
-	 	  	if( currentTop > secondaryNavOffsetTop + scrollOffset ) {
+	 	  	if( currentTop > secondaryNavOffsetTop + scrollOffset && !changingLink) {
 	 	  		//hide primary nav
 	    		mainHeader.addClass('is-hidden');
 	    		secondaryNavigation.addClass('fixed slide-up');
 	    		belowNavHeroContent.addClass('secondary-nav-fixed');
-	    	} else if( currentTop > secondaryNavOffsetTop ) {
+	    		isHidden = true;
+	    	} else if( currentTop > secondaryNavOffsetTop && !changingLink) {
 	    		//once the secondary nav is fixed, do not hide primary nav if you haven't scrolled more than scrollOffset 
 	    		mainHeader.removeClass('is-hidden');
 	    		secondaryNavigation.addClass('fixed').removeClass('slide-up');
 	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    		isHidden = true;
 	    	}
-
 	    }
+	}
+
+	function hasClass(element, cls) {
+	    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 	}
 });
