@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
 		if( !scrolling ) {
 			scrolling = true;
 			(!window.requestAnimationFrame)
-				? setTimeout(autoHideHeader, 250)
+				? setTimeout(autoHideHeader, 500)
 				: requestAnimationFrame(autoHideHeader);
 		}
 	});

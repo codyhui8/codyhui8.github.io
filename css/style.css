@@ -535,8 +535,14 @@ Intro Section
 }
 
 /** An element that fades in */
-.m-scene .scene_element--fadein {
+.m-scene .scene_element--fadeinpicture {
+  animation-delay: 0.5s;
   animation-duration: 2s;
+  animation-name: fadeIn;
+}
+
+.m-scene .scene_element--fadein {
+  animation-duration: 1.5s;
   animation-name: fadeIn;
 }
 
@@ -548,7 +554,7 @@ Intro Section
 
 /** An element that fades in and slides up */
 .m-scene .scene_element--fadeinup {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-name: fadeInUp;
 }
 
