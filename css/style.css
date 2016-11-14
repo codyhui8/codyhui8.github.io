@@ -439,10 +439,13 @@ Main content
   text-align: center;
   margin-top: -1%;
   margin-bottom: -2%;
+  border-bottom: 2px; 
+  border-color: black;
 }
 
-.cd-main-content #education {
-  margin-top: 2%;
+.cd-main-content table {
+  border-color: black;
+  border-bottom: 10px;
 }
 
 /* -------------------------------- 
