@@ -526,6 +526,11 @@ Intro Section
   animation-name: fadeIn;
 }
 
+.m-scene.is-exiting .scene_element--fadein {
+  animation-duration: 2s;
+  animation-direction: alternate-reverse;
+}
+
 /** An element that fades in and slides up */
 .m-scene .scene_element--fadeinup {
   animation-duration: 2s;
