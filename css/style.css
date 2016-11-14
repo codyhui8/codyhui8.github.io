@@ -442,7 +442,7 @@ Intro Section
   /* vertically align its content */
   display: table;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 50px;
   height: 300px;
   background: url(../img/cd-hero-background.jpg) no-repeat center center;
   background-size: cover;
@@ -470,6 +470,20 @@ Intro Section
 @keyframes fadeIn {
   0% {
     opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
   }
 
   100% {
@@ -528,6 +542,7 @@ Intro Section
 
 .m-scene.is-exiting .scene_element--fadein {
   animation-duration: 2s;
+  animation-name: fadeInFast;
   animation-direction: alternate-reverse;
 }
 
