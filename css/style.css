@@ -59,7 +59,7 @@ a {
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-auto-hide-header {
     height: 80px;
   }
@@ -136,7 +136,7 @@ a {
       -ms-transform: translateY(6px);
           transform: translateY(6px);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-auto-hide-header .nav-trigger {
     display: none;
   }
@@ -188,7 +188,7 @@ a {
 .cd-primary-nav > ul a:hover, .cd-primary-nav > ul a.active {
   color: #8F3985;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-primary-nav {
     /* vertically align its content */
     display: table;
@@ -235,7 +235,7 @@ a {
   */
   display: block;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .nav-open .cd-primary-nav ul,
   .cd-primary-nav ul:target {
     display: table-cell;
@@ -247,8 +247,10 @@ a {
 Bracket Hover Over 
 
 -------------------------------- */
-nav a::before,
-nav a::after {
+#cd-navigation a::before,
+#cd-navigation a::after, 
+.cd-secondary-nav a::before,
+.cd-secondary-nav a::after {
     display: inline-block;
     opacity: 0;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
@@ -257,26 +259,32 @@ nav a::after {
     text-decoration: none;
 }
 
-nav a::before {
-    margin-right: 10px;
+#cd-navigation a::before,
+.cd-secondary-nav a::before {
+    margin-right: 5px;
     content: '[';
     -webkit-transform: translateX(20px);
     -moz-transform: translateX(20px);
     transform: translateX(20px);
 }
 
-nav a::after {
-    margin-left: 10px;
+#cd-navigation a::after,
+.cd-secondary-nav a::after {
+    margin-left: 5px;
     content: ']';
     -webkit-transform: translateX(-20px);
     -moz-transform: translateX(-20px);
     transform: translateX(-20px);
 }
 
-nav a:hover::before,
-nav a:hover::after,
-nav a:focus::before,
-nav a:focus::after{
+#cd-navigation a:hover::before,
+#cd-navigation a:hover::after,
+.cd-secondary-nav a:hover::before,
+.cd-secondary-nav a:hover::after,
+#cd-navigation a:focus::before,
+#cd-navigation a:focus::after, 
+.cd-secondary-nav a:focus::before,
+.cd-secondary-nav a:focus::after {
     opacity: 1;
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -296,7 +304,7 @@ nav a:focus::after{
   margin-left: auto;
   margin-right: auto;
   width: 1240px;
-  height: 50px;
+  height: 70px;
   background-color: #031533;
   /* Force Hardware Acceleration */
   -webkit-transform: translateZ(0);
@@ -363,13 +371,13 @@ nav a:focus::after{
   display: block;
   color: #ffffff;
   opacity: .6;
-  line-height: 50px;
+  line-height: 70px;
   padding: 0 1em;
 }
 .cd-secondary-nav a:hover, .cd-secondary-nav a.active {
   opacity: 1;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-secondary-nav {
     height: 70px;
     overflow: visible;
@@ -409,7 +417,7 @@ nav a:focus::after{
       -ms-transform: translateY(-60px);
           transform: translateY(-60px);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-secondary-nav.fixed {
     top: 80px;
     /* fixes a bug where nav and subnab move with a slight delay */
@@ -453,7 +461,7 @@ Main content
   font-family: "David Libre", sans-serif;
   color: black;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-main-content {
     padding-top: 80px;
   }
@@ -480,7 +488,7 @@ Main content
   height: 50px;
   visibility: hidden;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-main-content.sub-nav :target::before,
   .cd-main-content.sub-nav-hero :target::before {
     margin-top: -70px;
@@ -583,7 +591,7 @@ Resume content
   }
 } 
 
-@media only screen and (min-width: 1024) {
+@media only screen and (min-width: 1240) {
   .section {
     width:1024px;
   }
@@ -655,7 +663,7 @@ Intro Section
     height: 400px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
   .cd-hero {
     height: 600px;
     margin-top: 80px;
