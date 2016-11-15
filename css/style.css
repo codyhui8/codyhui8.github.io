@@ -307,7 +307,7 @@ Main content
     line-height: 1.6;
     margin: 2em auto;
     font-family: "Helvetica Neue", sans-serif;
-    color: #a5a8a9; }
+    color: #181818; }
   @media only screen and (min-width: 1240px) {
     .cd-main-content {
       padding-top: 80px; }
@@ -363,6 +363,78 @@ Intro Section
       height: 600px;
       margin-top: 80px; } }
 
+/* -------------------------------- 
+
+Footer Section
+
+-------------------------------- */
+.cd-main-content #resume-data {
+  padding-left: 5%;
+  padding-right: 5%; }
+.cd-main-content #resume-li {
+  margin-top: 5%; }
+.cd-main-content .resume-header {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -1%;
+  margin-bottom: -2%;
+  border-bottom: 2px;
+  border-color: black; }
+.cd-main-content .resume-basic {
+  text-align: center;
+  margin-bottom: -10px; }
+.cd-main-content #social-table, .cd-main-content #education-table, .cd-main-content #skills-table {
+  width: 100%;
+  text-align: center; }
+  .cd-main-content #social-table td, .cd-main-content #education-table td, .cd-main-content #skills-table td {
+    width: calc($L / 3); }
+.cd-main-content #education-table tr p {
+  margin-top: -10px; }
+.cd-main-content #skills-table td {
+  width: calc($L / 5); }
+
+.experience-info {
+  padding-left: 10%; }
+
+.experience-first-row {
+  width: 100%;
+  margin-bottom: -8%; }
+  .experience-first-row .second-column {
+    text-align: right; }
+  .experience-first-row strong {
+    font-size: 120%; }
+
+.resume-icons {
+  float: left;
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 10px; }
+
+@media only screen and (max-width: 768px) {
+  #social-table, .experience-first-row, #education-table {
+    width: 100%;
+    align: center; }
+    #social-table td, .experience-first-row td, #education-table td {
+      display: block;
+      width: 100%; }
+
+  .experience-first-row td {
+    margin-bottom: -1em; }
+    .experience-first-row td p {
+      padding-top: -100px;
+      text-align: left !important; }
+  .experience-first-row .first-row-one {
+    margin-top: 0px;
+    margin-bottom: -2em; }
+
+  #social-table td {
+    margin-left: auto;
+    margin-right: auto; } }
+@media only screen and (min-width: 1240px) {
+  .section {
+    width: 1024px; }
+    .section .max-length {
+      width: 1024px; } }
 /* -------------------------------- 
 
 Footer Section
