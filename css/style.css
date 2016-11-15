@@ -35,8 +35,9 @@ a {
   z-index: 2;
   top: 0;
   left: 0;
-  margin-left: 2.5%;
-  width: 95%;
+  margin-left: calc((100% - 1240px) / 2);
+  margin-right: auto;
+  width: 1240px;
   height: 60px;
   background-color: #ffffff;
   /* Force Hardware Acceleration */
@@ -251,8 +252,9 @@ a {
   position: relative;
   z-index: 1;
   clear: both;
-  margin-left: 2.5%;
-  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1240px;
   height: 50px;
   background-color: #031533;
   /* Force Hardware Acceleration */
@@ -384,13 +386,12 @@ Main content
 
 -------------------------------- */
 .cd-main-content {
-  margin-left: 2.5%;
-  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1240px;
   padding: 60px 5% 2em;
   overflow: hidden;
   background: #ffffff;
-  padding-left: 0%;
-  padding-right: 0%;
 }
 .cd-main-content.sub-nav {
   /* to be used if there is sub nav */
@@ -495,9 +496,8 @@ Resume content
 }
 
 .experience-first-row {
-  width: 100%;
+  width: 1024px;
   margin-bottom: -8%;
-  margin-left: 10px;
 }
 
 .experience-first-row strong {
@@ -554,8 +554,9 @@ Footer Section
 
 .footer-bar {
   height: 100px;
-  margin-left: 2.5%;
-  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1240px;
 }
 .footer-table {
   width: 100%;
@@ -589,12 +590,13 @@ Intro Section
 .cd-hero {
   /* vertically align its content */
   display: table;
-  width: 95%;
+  width: 1240px;
   margin-top: 50px;
   height: 300px;
   background: url(../img/cd-hero-background.jpg) no-repeat center center;
   background-size: cover;
-  margin-left: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cd-hero .cd-hero-content {
   /* vertically align inside parent element */
@@ -614,8 +616,19 @@ Intro Section
   }
 }
 
-/* Keyframes */
+@media only screen and (max-width: 1240px) {
+  .footer-bar, .cd-hero, .cd-secondary-nav, .cd-auto-hide-header, .cd-main-content {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
 
+/* -------------------------------- 
+
+Keyframe Section
+
+-------------------------------- */
 @keyframes fadeIn {
   0% {
     opacity: 0;
