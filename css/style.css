@@ -35,8 +35,8 @@ a {
   z-index: 2;
   top: 0;
   left: 0;
-  width: 90%;
-  margin-left: 5%;
+  margin-left: 2.5%;
+  width: 95%;
   height: 60px;
   background-color: #ffffff;
   /* Force Hardware Acceleration */
@@ -251,8 +251,8 @@ a {
   position: relative;
   z-index: 1;
   clear: both;
-  width: 90%;
-  margin-left: 5%;
+  margin-left: 2.5%;
+  width: 95%;
   height: 50px;
   background-color: #031533;
   /* Force Hardware Acceleration */
@@ -384,8 +384,8 @@ Main content
 
 -------------------------------- */
 .cd-main-content {
-  margin-left: 5%;
-  width: 90%;
+  margin-left: 2.5%;
+  width: 95%;
   padding: 60px 5% 2em;
   overflow: hidden;
   background: #ffffff;
@@ -554,8 +554,8 @@ Footer Section
 
 .footer-bar {
   height: 100px;
-  width: 90%;
-  margin-left: 5%;
+  margin-left: 2.5%;
+  width: 95%;
 }
 .footer-table {
   width: 100%;
@@ -589,12 +589,12 @@ Intro Section
 .cd-hero {
   /* vertically align its content */
   display: table;
-  width: 90%;
+  width: 95%;
   margin-top: 50px;
   height: 300px;
   background: url(../img/cd-hero-background.jpg) no-repeat center center;
   background-size: cover;
-  margin-left: 5%;
+  margin-left: 2.5%;
 }
 .cd-hero .cd-hero-content {
   /* vertically align inside parent element */
