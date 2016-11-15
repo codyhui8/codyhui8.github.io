@@ -384,8 +384,13 @@ Main content
 
 -------------------------------- */
 .cd-main-content {
+  margin-left: 5%;
+  width: 90%;
   padding: 60px 5% 2em;
   overflow: hidden;
+  background: #ffffff;
+  padding-left: 0%;
+  padding-right: 0%;
 }
 .cd-main-content.sub-nav {
   /* to be used if there is sub nav */
