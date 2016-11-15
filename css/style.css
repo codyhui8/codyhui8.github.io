@@ -179,7 +179,7 @@ a {
   /* 
   	show primary nav - mobile only 
   	:target is used to show navigation on no-js devices
-  */
+  	*/
   display: block; }
   @media only screen and (min-width: 1240px) {
     .nav-open .cd-primary-nav ul,
@@ -321,7 +321,7 @@ Main content
 /*
 	adjust the positioning of in-page links
 	http://nicolasgallagher.com/jump-links-and-viewport-positioning/
-*/
+	*/
 .cd-main-content.sub-nav :target::before,
 .cd-main-content.sub-nav-hero :target::before {
   display: block;

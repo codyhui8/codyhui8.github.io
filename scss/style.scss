@@ -47,7 +47,7 @@ a {
 	top: 0;
 	left: 0;
 	margin-left: calc((100% - 1240px) / 2);
-  	margin-right: auto;
+	margin-right: auto;
 	width: $L;
 	height: $header-height-small;
 	background-color: $color-3;
@@ -233,13 +233,13 @@ a {
 	/* 
 		show primary nav - mobile only 
 		:target is used to show navigation on no-js devices
-	*/
-	display: block;
+		*/
+		display: block;
 
-	@include MQ(L) {
-		display: table-cell;
+		@include MQ(L) {
+			display: table-cell;
+		}
 	}
-}
 
 /* -------------------------------- 
 
@@ -431,21 +431,21 @@ Main content
 /*
 	adjust the positioning of in-page links
 	http://nicolasgallagher.com/jump-links-and-viewport-positioning/
-*/
+	*/
 
-.cd-main-content.sub-nav :target::before,
-.cd-main-content.sub-nav-hero :target::before { 
-	display: block;
-  	content: ""; 
-  	margin-top: -$secondary-nav-height-small; 
-  	height: $secondary-nav-height-small; 
-  	visibility: hidden; 
+	.cd-main-content.sub-nav :target::before,
+	.cd-main-content.sub-nav-hero :target::before { 
+		display: block;
+		content: ""; 
+		margin-top: -$secondary-nav-height-small; 
+		height: $secondary-nav-height-small; 
+		visibility: hidden; 
 
-  	@include MQ(L) {
-  		margin-top: -$secondary-nav-height; 
-  		height: $secondary-nav-height;
-  	}
-}
+		@include MQ(L) {
+			margin-top: -$secondary-nav-height; 
+			height: $secondary-nav-height;
+		}
+	}
 
 /* -------------------------------- 
 
@@ -489,11 +489,11 @@ Footer Section
 
 .cd-main-content {
 	#resume-data {
-	  padding-left: 5%;
-	  padding-right: 5%;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 	#resume-li {
-	  margin-top: 5%;
+		margin-top: 5%;
 	}
 	.resume-header {
 		font-size: 40px;
@@ -523,53 +523,53 @@ Footer Section
 	}
 }
 .experience-info {
-  padding-left: 10%;
+	padding-left: 10%;
 }
 .experience-first-row {
-  width: 100%;
-  margin-bottom: -8%;
+	width: 100%;
+	margin-bottom: -8%;
 
-  .second-column {
-  	text-align: right;
-  }
+	.second-column {
+		text-align: right;
+	}
 
-  strong {
-  	font-size: 120%;
-  }
+	strong {
+		font-size: 120%;
+	}
 }
 .resume-icons {
-  float: left;
-  height: 40px;
-  margin-top: 5px;
-  margin-right: 10px;
+	float: left;
+	height: 40px;
+	margin-top: 5px;
+	margin-right: 10px;
 }
 @include MQM(M) {
-  #social-table, .experience-first-row, #education-table {
-    width: 100%;
-    align: center;
+	#social-table, .experience-first-row, #education-table {
+		width: 100%;
+		align: center;
 
-    td {
-    	display:block;
-		width:100%;
-    }
-  }
-  .experience-first-row {
-  	td {
-  		margin-bottom: -1em;
-  		p {
-  			padding-top: -100px;
-    		text-align: left !important;
-  		}
-  	}
-  	.first-row-one {
-  		margin-top: 0px ;
-    	margin-bottom: -2em;
-  	}
-  }
-  #social-table td{
-    margin-left: auto;
-    margin-right: auto;
-  }
+		td {
+			display:block;
+			width:100%;
+		}
+	}
+	.experience-first-row {
+		td {
+			margin-bottom: -1em;
+			p {
+				padding-top: -100px;
+				text-align: left !important;
+			}
+		}
+		.first-row-one {
+			margin-top: 0px ;
+			margin-bottom: -2em;
+		}
+	}
+	#social-table td{
+		margin-left: auto;
+		margin-right: auto;
+	}
 } 
 
 @include MQ(L) {
@@ -588,34 +588,34 @@ Footer Section
 -------------------------------- */
 
 .footer-bar {
-  height: $footer-height;
-  margin-left: auto;
-  margin-right: auto;
-  width: $L;
+	height: $footer-height;
+	margin-left: auto;
+	margin-right: auto;
+	width: $L;
 }
 .footer-table {
-  width: 100%;
-  height: 100%;
-  vertical-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
+	width: 100%;
+	height: 100%;
+	vertical-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
 
-  td {
-  	width: calc(100% / 3); 
-	vertical-align: top;
-  }
+	td {
+		width: calc(100% / 3); 
+		vertical-align: top;
+	}
 }
 footer {
-  width: 100%;
-  height: 100px;
-  background-color: $color-1;
+	width: 100%;
+	height: 100px;
+	background-color: $color-1;
 
-  p {
-  	height: 100%;
-	text-align: center;
-	color: white;
-	padding-top: 48px;
-  }
+	p {
+		height: 100%;
+		text-align: center;
+		color: white;
+		padding-top: 48px;
+	}
 }
 
 /* -------------------------------- 
@@ -624,12 +624,12 @@ Fix for screen bigger than 1240px
 
 -------------------------------- */
 
-@media only screen and (max-width: 1240px) {
-  .footer-bar, .cd-hero, .cd-secondary-nav, .cd-auto-hide-header, .cd-main-content {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-  }
+@include MQM(L) {
+	.footer-bar, .cd-hero, .cd-secondary-nav, .cd-auto-hide-header, .cd-main-content {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
 }
 
 /* -------------------------------- 
@@ -641,27 +641,27 @@ Bracket Hover Over
 #cd-navigation, .cd-secondary-nav {
 	a::before {
 		display: inline-block;
-    	opacity: 0;
-    	transition: transform 0.3s, opacity 0.2s;
-    	text-decoration: none;
-    	margin-right: 5px;
-    	content: '[';
-    	transform: translateX(20px);
+		opacity: 0;
+		transition: transform 0.3s, opacity 0.2s;
+		text-decoration: none;
+		margin-right: 5px;
+		content: '[';
+		transform: translateX(20px);
 	}
 
 	a::after {
 		display: inline-block;
-	    opacity: 0;
-	    transition: transform 0.3s, opacity 0.2s;
-	    text-decoration: none;
-	    margin-left: 5px;
-	    content: ']';
-	    transform: translateX(-20px);
+		opacity: 0;
+		transition: transform 0.3s, opacity 0.2s;
+		text-decoration: none;
+		margin-left: 5px;
+		content: ']';
+		transform: translateX(-20px);
 	}
 
 	a:hover::before, a:hover::after, a:focus::before, a:focus::after {
 		opacity: 1;
-    	transform: translateX(0px);
+		transform: translateX(0px);
 	}
 }
 
@@ -671,93 +671,93 @@ Keyframe Section
 
 -------------------------------- */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes fadeInFast {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  20% {
-    opacity: 0.8;
-  }
+	20% {
+		opacity: 0.8;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 @keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 @keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
+	0% {
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 .m-scene {
 	.scene_element {
-	  animation-duration: 1s;
-	  transition-timing-function: ease-in;
-	  animation-fill-mode: both;
+		animation-duration: 1s;
+		transition-timing-function: ease-in;
+		animation-fill-mode: both;
 	}
 
 	.scene_element--fadeinpicture {
-	  animation-delay: 0.5s;
-	  animation-duration: 2s;
-	  animation-name: fadeIn;
+		animation-delay: 0.5s;
+		animation-duration: 2s;
+		animation-name: fadeIn;
 	}
 
 	.scene_element--fadein {
-	  animation-duration: 1.5s;
-	  animation-name: fadeIn;
+		animation-duration: 1.5s;
+		animation-name: fadeIn;
 	}
 
 	.scene_element--fadeinup {
-	  animation-duration: 1s;
-	  animation-name: fadeInUp;
+		animation-duration: 1s;
+		animation-name: fadeInUp;
 	}
 
 	.scene_element--fadeindown {
-	  animation-name: fadeInDown;
+		animation-name: fadeInDown;
 	}
 
 	.scene_element--fadeinright {
-	  animation-name: fadeInRight;
+		animation-name: fadeInRight;
 	}
 }
