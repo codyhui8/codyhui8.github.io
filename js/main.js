@@ -14,6 +14,16 @@ jQuery(document).ready(function($){
 		scrollOffset = 150,
 		isHidden = false;
 
+	$('body').bind('beforeunload',function(){
+		currentSection.removeClass('active');
+		var url = window.location.href;
+		var host = window.location.host;
+		if(url.indexOf('http://' + host + '/resume.html') != -1) {
+			currentSection = $("#basicid");
+		}
+    	currentSection.addClass('active');
+	});
+
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 		$(".headers").on("click", function( e ) {
@@ -31,9 +41,6 @@ jQuery(document).ready(function($){
 			} else {
 				offsetDistance = 150;
 			}
-			console.log(isHidden);
-			console.log(distance);
-			console.log(offsetDistance);
 			$("body, html").stop(true, true).animate({ 
 				scrollTop: $( $(this).attr('href') ).offset().top - offsetDistance
 			}, 1000);
@@ -49,8 +56,8 @@ jQuery(document).ready(function($){
 	        var id = $(this).attr('id');
 
 	        if (position >= target) {
+	        	currentSection.removeClass('active');
 	        	currentSection = $('.cd-secondary-nav > ul > li > a[href="#' + id + '"]');
-	            $('.cd-secondary-nav > ul > li > a').removeClass('active');
             	$('.cd-secondary-nav > ul > li > a[href="#' + id + '"]').addClass('active');
 	        }
     	});
