@@ -360,6 +360,7 @@ a {
 -------------------------------- */
 .cd-secondary-nav.fixed {
   position: fixed;
+  margin-left: calc((100% - 1240px) / 2);
   top: 60px;
 }
 .cd-secondary-nav.slide-up {
@@ -453,8 +454,8 @@ Resume content
 -------------------------------- */
 
 #resume-data {
-  padding-left: 10%;
-  padding-right: 10%; 
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #resume-li {
@@ -480,7 +481,7 @@ Resume content
   text-align: center;
 }
 .cd-main-content #social-table td, #education-table td {
-  width: calc(100% / 3);
+  width: calc(1240px / 3);
 }
 
 .cd-main-content #education-table tr p {
@@ -488,7 +489,7 @@ Resume content
 }
 
 .cd-main-content #skills-table td {
-  width: calc(100% / 5);
+  width: calc(1240px / 5);
 }
 
 .experience-info {
@@ -496,8 +497,12 @@ Resume content
 }
 
 .experience-first-row {
-  width: 1024px;
+  width: 100%;
   margin-bottom: -8%;
+}
+
+.experience-first-row .second-column {
+  text-align: right;
 }
 
 .experience-first-row strong {
