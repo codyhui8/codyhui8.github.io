@@ -110,9 +110,11 @@ a {
 .cd-auto-hide-header.nav-open .nav-trigger em {
   /* transform menu icon into a 'X' icon */
   background-color: rgba(255, 255, 255, 0); }
+
 .cd-auto-hide-header.nav-open .nav-trigger em::before {
   /* rotate top line */
   transform: rotate(-45deg); }
+
 .cd-auto-hide-header.nav-open .nav-trigger em::after {
   /* rotate bottom line */
   transform: rotate(45deg); }
@@ -177,9 +179,9 @@ a {
 .nav-open .cd-primary-nav ul,
 .cd-primary-nav ul:target {
   /* 
-  	show primary nav - mobile only 
-  	:target is used to show navigation on no-js devices
-  	*/
+		show primary nav - mobile only 
+		:target is used to show navigation on no-js devices
+		*/
   display: block; }
   @media only screen and (min-width: 1240px) {
     .nav-open .cd-primary-nav ul,
@@ -272,8 +274,10 @@ a {
   position: fixed;
   margin-left: calc((100% - 1240px) / 2);
   top: 60px; }
+
 .cd-secondary-nav.slide-up {
   transform: translateY(-60px); }
+
 @media only screen and (min-width: 1240px) {
   .cd-secondary-nav.fixed {
     top: 80px;
@@ -371,8 +375,10 @@ Footer Section
 .cd-main-content #resume-data {
   padding-left: 5%;
   padding-right: 5%; }
+
 .cd-main-content #resume-li {
   margin-top: 5%; }
+
 .cd-main-content .resume-header {
   font-size: 40px;
   font-weight: bold;
@@ -380,16 +386,20 @@ Footer Section
   margin-bottom: -2%;
   border-bottom: 2px;
   border-color: black; }
+
 .cd-main-content .resume-basic {
   text-align: center;
   margin-bottom: -10px; }
+
 .cd-main-content #social-table, .cd-main-content #education-table, .cd-main-content #skills-table {
   width: 100%;
   text-align: center; }
   .cd-main-content #social-table td, .cd-main-content #education-table td, .cd-main-content #skills-table td {
     width: calc($L / 3); }
+
 .cd-main-content #education-table tr p {
   margin-top: -10px; }
+
 .cd-main-content #skills-table td {
   width: calc($L / 5); }
 
@@ -417,7 +427,6 @@ Footer Section
     #social-table td, .experience-first-row td, #education-table td {
       display: block;
       width: 100%; }
-
   .experience-first-row td {
     margin-bottom: -1em; }
     .experience-first-row td p {
@@ -426,15 +435,16 @@ Footer Section
   .experience-first-row .first-row-one {
     margin-top: 0px;
     margin-bottom: -2em; }
-
   #social-table td {
     margin-left: auto;
     margin-right: auto; } }
+
 @media only screen and (min-width: 1240px) {
   .section {
     width: 1024px; }
     .section .max-length {
       width: 1024px; } }
+
 /* -------------------------------- 
 
 Footer Section
@@ -476,6 +486,7 @@ Fix for screen bigger than 1240px
     margin-left: 0;
     margin-right: 0;
     width: 100%; } }
+
 /* -------------------------------- 
 
 Bracket Hover Over 
@@ -489,6 +500,7 @@ Bracket Hover Over
   margin-right: 5px;
   content: '[';
   transform: translateX(20px); }
+
 #cd-navigation a::after, .cd-secondary-nav a::after {
   display: inline-block;
   opacity: 0;
@@ -497,6 +509,7 @@ Bracket Hover Over
   margin-left: 5px;
   content: ']';
   transform: translateX(-20px); }
+
 #cd-navigation a:hover::before, #cd-navigation a:hover::after, #cd-navigation a:focus::before, #cd-navigation a:focus::after, .cd-secondary-nav a:hover::before, .cd-secondary-nav a:hover::after, .cd-secondary-nav a:focus::before, .cd-secondary-nav a:focus::after {
   opacity: 1;
   transform: translateX(0px); }
@@ -511,6 +524,7 @@ Keyframe Section
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @keyframes fadeInFast {
   0% {
     opacity: 0; }
@@ -518,6 +532,7 @@ Keyframe Section
     opacity: 0.8; }
   100% {
     opacity: 1; } }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -525,6 +540,7 @@ Keyframe Section
   100% {
     opacity: 1;
     transform: none; } }
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -532,6 +548,7 @@ Keyframe Section
   100% {
     opacity: 1;
     transform: none; } }
+
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -539,23 +556,27 @@ Keyframe Section
   100% {
     opacity: 1;
     transform: none; } }
+
 .m-scene .scene_element {
   animation-duration: 1s;
   transition-timing-function: ease-in;
   animation-fill-mode: both; }
+
 .m-scene .scene_element--fadeinpicture {
   animation-delay: 0.5s;
   animation-duration: 2s;
   animation-name: fadeIn; }
+
 .m-scene .scene_element--fadein {
   animation-duration: 1.5s;
   animation-name: fadeIn; }
+
 .m-scene .scene_element--fadeinup {
   animation-duration: 1s;
   animation-name: fadeInUp; }
+
 .m-scene .scene_element--fadeindown {
   animation-name: fadeInDown; }
+
 .m-scene .scene_element--fadeinright {
   animation-name: fadeInRight; }
-
-/*# sourceMappingURL=style.css.map */
